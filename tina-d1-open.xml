@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="../D1_Tina_Open/tina-d1-open" name="tina" review="http://gerrit.allwinnertech.com:8081/ssh_info"/>
+  
+  <default remote="tina" revision="product-smartx-d1-tina-v1.0-release"/>
+  
+  <project name="lichee/brandy-2.0/opensbi"/>
+  <project name="lichee/brandy-2.0/spl"/>
+  <project name="lichee/brandy-2.0/tools">
+    <copyfile dest="lichee/brandy-2.0/build.sh" src="build.sh"/>
+  </project>
+  <project name="lichee/brandy-2.0/u-boot-2018"/>
+  <project name="lichee/device/config/common" path="device/config/common"/>
+  <project name="lichee/device/config/d1" path="device/config/chips/d1"/>
+  <project name="lichee/linux-5.4"/>
+  <project name="product/tina/build" path="build">
+    <copyfile dest="Makefile" src="top_main.mk"/>
+    <copyfile dest="rules.mk" src="rules.mk"/>
+  </project>
+  <project name="product/tina/config" path="config">
+    <copyfile dest="Config.in" src="top_config.in"/>
+  </project>
+  <project name="product/tina/dl" path="dl"/>
+  <project name="product/tina/package" path="package"/>
+  <project name="product/tina/prebuilt" path="prebuilt"/>
+  <project name="product/tina/scripts" path="scripts"/>
+  <project name="product/tina/target" path="target"/>
+  <project name="product/tina/toolchain" path="toolchain"/>
+  <project name="product/tina/tools" path="tools"/>
+</manifest>
